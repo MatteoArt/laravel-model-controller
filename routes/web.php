@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Database connesso';
-});
+use App\Http\Controllers\Guest\PageController;
+
+Route::get('/', [PageController::class, 'index']);
